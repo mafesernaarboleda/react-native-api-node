@@ -2,11 +2,8 @@
  * @author Maria Fernanda Serna
  */
 
-import {
-  StyleSheet,
-  Dimensions
-} from 'react-native';
-const { width } = Dimensions.get('window');
+import {StyleSheet, Dimensions} from 'react-native';
+const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   header: {
@@ -18,8 +15,8 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     paddingLeft: 20
   },
-  titleHeader:{
-    fontWeight:'bold',
+  titleHeader: {
+    fontWeight: 'bold',
     fontSize: 20
   }
 });

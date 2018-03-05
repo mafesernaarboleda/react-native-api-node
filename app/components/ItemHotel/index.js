@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 import { Card } from 'react-native-elements'
 import StarRating from 'react-native-star-rating';
 
@@ -11,20 +11,29 @@ import styles from './style';
 
 class ItemHotel extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const {
+      item,
+      action
+    } = this.props;
     return (
-      <Card containerStyle={styles.listItem}
+      <TouchableOpacity onPress={() => action(item._id)}>
+        <Card containerStyle={styles.listItem}
                   imageStyle={{ height : 170 }}
-                  image={{ uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-01.jpg'}}>
+                  image={{ uri: item.pictures[0].url}}>
                   <View style={styles.infoItem}>
                     <View>
                       <Text style={styles.titleItem}>
-                        GRAN HOTEL
+                        {item.name}
                       </Text>
                         <StarRating
                         disabled={false}
                         maxStars={5}
-                        rating={4}
+                        rating={item.stars}
                         fullStarColor={'#F5D384'}
                         starSize={20}
                         />
@@ -39,6 +48,7 @@ class ItemHotel extends Component {
                     </View>
                   </View>
          </Card>
+      </TouchableOpacity>
     )
   }
 }

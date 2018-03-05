@@ -6,21 +6,12 @@ import {
     StackNavigator,
   } from 'react-navigation';
 
-import HotelList from './screens/HotelList/HotelList';
-import Hotel from './screens/Hotel/Hotel';
+import HotelListContainer from './screens/HotelList';
+import HotelContainer from './screens/Hotel';
 
   const App = StackNavigator({
-    Hotel: {
-      screen: Hotel,
-      headerMode: 'none',
-      header: null,
-      navigationOptions: {
-        gesturesEnabled: false,
-        header: null,
-      },
-    },
     HotelList: {
-      screen: HotelList,
+      screen: HotelListContainer,
       headerMode: 'none',
       header: null,
       navigationOptions: {
@@ -28,6 +19,15 @@ import Hotel from './screens/Hotel/Hotel';
         header: null,
       },
     },
+    Hotel: {
+      screen: HotelContainer,
+      headerMode: 'none',
+      header: null,
+      navigationOptions: {
+        gesturesEnabled: false,
+        header: null,
+      },
+    }
   });
 
   export default App;

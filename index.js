@@ -10,13 +10,15 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import App from './app/index';
-//import reducers from './app/reducers/index';
+import reducers from './app/reducers/index';
 
 const loggerMiddleware = createLogger();
-//const store = createStore(reducers, applyMiddleware(thunkMiddleware, loggerMiddleware));
+const store = createStore(reducers, applyMiddleware(thunkMiddleware, loggerMiddleware));
 
 const hotelsalmundo = () => (
-  <App />
-);
+  <Provider store={store}>
+    <App />
+  </Provider>
+  );
 
 AppRegistry.registerComponent('hotelsalmundo', () => hotelsalmundo);

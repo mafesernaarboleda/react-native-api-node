@@ -5,82 +5,83 @@
 import React, { PropTypes, Component } from 'react';
 import {
   View,
-  TouchableOpacity,
   Text,
-  Image,
   ImageBackground,
   Dimensions,
-  TouchableHighlight,
-  Modal,
 } from 'react-native';
 import { Card, Icon } from 'react-native-elements'
 import StarRating from 'react-native-star-rating';
 import HeaderNav from '../../components/HeaderNav';
 import Gallery from '../../components/Gallery';
-import styles from './style';
+import GoogleStaticMap from 'react-native-google-static-map';
 
+import styles from './style';
+import baseUrl from '../../config/baseurl';
 
 const WIDTH = Dimensions.get('window').width;
 
 const background = require('./../../images/background.png');
 
-const images = [{
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}, {
-  url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'
-}]
-
 class Hotel extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      hotel: {
+        loc: [],
+        pictures: []
+      }
+    }
   }
 
-  onBack(){
-    console.log('puta');
+  componentWillMount() {
+    const { getHotelById } = this.props;
+    const { state } = this.props.navigation;
+    const params = state.params ? state.params : '';
+    getHotelById(params.id);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.successGetHotelById) {
+      this.setState({ hotel: nextProps.hotel });
+    }
   }
 
   render() {
+    const { hotel } = this.state;
     return (
         <View style={styles.container}>
-            <HeaderNav title="Gran HOTEL" action={this.onBack}></HeaderNav>
+            <HeaderNav title={'HOTEL ' + hotel.name} {...this.props}></HeaderNav>
             <ImageBackground source={background} style={styles.container} resizeMode="stretch">
               <Card
               containerStyle={styles.listItem}>
                <Text style={{fontWeight:'bold', fontSize: 20}}>
-               GRAN HOTEL
+                {hotel.name}
                 </Text>
               <StarRating
                 containerStyle = {{ width: WIDTH - 300, alignItems: 'flex-start'}}
                 disabled={false}
                 maxStars={5}
-                rating={4}
+                rating={hotel.stars}
                 fullStarColor={'#F5D384'}
                 starSize={20}/>
                 <View style={styles.infoAddress}>
                 <Icon name='map-marker' type='font-awesome' size={25} color='#D3D2D2'/>
                   <Text style={styles.textAddress}>
-                    741 Clarkson Avenue, Ypsilanti, Puerto Rico, 302
+                    {hotel.address}
                   </Text>
                 </View>
-                <Image
-                  resizeMode="cover"
-                  style={{ height : 250 }}
-                  source={{ uri: 'http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-01.jpg'}}/>
-            </Card>
+                <GoogleStaticMap
+                  latitude={hotel.loc[0]}
+                  longitude={hotel.loc[1]}
+                  zoom={13}
+                  size={{ width: 340, height: 250 }}
+                  apiKey={baseUrl.API_KEY}
+              />
+          </Card>
             <View style={styles.gallery}>
               <Text style={styles.titleGallery}>Gallery</Text>
-              <Gallery images={images}></Gallery>
+              <Gallery images={hotel.pictures}></Gallery>
             </View>
             </ImageBackground>
         </View>
