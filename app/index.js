@@ -6,8 +6,8 @@ import {
     StackNavigator,
   } from 'react-navigation';
 
-import HotelList from './screens/hotelList/hotelList';
-import Hotel from './screens/hotel/hotel';
+import HotelList from './screens/HotelList/HotelList';
+import Hotel from './screens/Hotel/Hotel';
 
   const App = StackNavigator({
     Hotel: {
