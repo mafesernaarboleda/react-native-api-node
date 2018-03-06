@@ -1,5 +1,6 @@
 # React Native APP + Backend NODEJS
-An example of React Native project with Backend Integration and workflow based on
+App in React Native for the consumption of an application in NodeJS + MongoDB, to list in the main screen the response of the call to the api ```/hotels``` and to be able to  search of a specific hotel indicating the name or  a caracter when calling the api ```/hotels/search/: filter```.
+
 [react-native-cli](https://facebook.github.io/react-native/docs/getting-started.html)
 
 ## Tools used in this project
