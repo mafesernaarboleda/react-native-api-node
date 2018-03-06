@@ -23,7 +23,6 @@ Read more [react-native-cli](https://facebook.github.io/react-native/docs/gettin
  ```bash
  $ npm install
  ```
-   
 # Set up your emulator
 
 ## iOS
