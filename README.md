@@ -68,7 +68,7 @@ We use [airbnb-javascript](https://github.com/airbnb/javascript/tree/master/reac
 
 * **Maria Fernanda Serna Arboleda** - *FullStack JavaScript Developer* - [Github](https://github.com/mafesernaarboleda)
 
-See also the list of [contributors](https://github.com/mafesernaarboleda/react-native-chat-firebase/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mafesernaarboleda/react-native-api-node/contributors) who participated in this project.
 
 ## License
 
