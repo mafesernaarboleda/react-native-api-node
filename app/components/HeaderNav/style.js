@@ -2,21 +2,34 @@
  * @author Maria Fernanda Serna
  */
 
-import {StyleSheet, Dimensions} from 'react-native';
-const {width} = Dimensions.get('window');
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
   header: {
-    height: 80,
+    height: 70,
     width,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
     backgroundColor: '#fff',
-    paddingLeft: 20
+    paddingTop: 20,
+    paddingLeft: 20,
   },
   titleHeader: {
-    fontWeight: 'bold',
-    fontSize: 20
-  }
+    fontSize: 20,
+    paddingLeft: 80,
+  },
+  iconRight: {
+    marginRight: 30,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  titleSession: {
+    color: '#EA5F4A',
+    fontSize: 15,
+    marginLeft: 10,
+  },
 });

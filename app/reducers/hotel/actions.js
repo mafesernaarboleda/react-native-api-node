@@ -22,11 +22,8 @@ export function getHotelById(id) {
     dispatch(getHotelByIdRequest());
     return hotelsApi
       .getHotelById(id)
-      .then((response) => response.json())
-      .then((response) => {
-        return dispatch(getHotelByIdRequestSuccess(response));
-      }).catch((err) => {
-        return dispatch(getHotelByIdRequestFail(err));
-    });
+      .then(response => response.json())
+      .then(response => dispatch(getHotelByIdRequestSuccess(response)))
+      .catch(err => dispatch(getHotelByIdRequestFail(err)));
   };
 }

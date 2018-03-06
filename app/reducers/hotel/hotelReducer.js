@@ -6,7 +6,10 @@ import * as types from './constants';
 
 const initialState = {
   loading: false,
-  hotel: { loc: [], pictures: []},
+  hotel: {
+    loc: [],
+    pictures: [],
+  },
   apiError: '',
   successGetHotelById: false,
 };

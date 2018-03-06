@@ -4,15 +4,18 @@
 
 import { connect } from 'react-redux';
 import HotelList from './HotelList';
-import { getHotelList } from './../../reducers/hotelList/actions';
+import { getHotelList, getHotelListBySearch } from './../../reducers/hotelList/actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   ...state.hotelList,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   getHotelList: () => {
     dispatch(getHotelList());
+  },
+  getHotelListBySearch: (search) => {
+    dispatch(getHotelListBySearch(search));
   },
 });
 

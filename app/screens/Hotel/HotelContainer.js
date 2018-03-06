@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 import Hotel from './Hotel';
 import { getHotelById } from './../../reducers/hotel/actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   ...state.hotel,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   getHotelById: (id) => {
     dispatch(getHotelById(id));
   },

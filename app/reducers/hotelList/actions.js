@@ -22,11 +22,19 @@ export function getHotelList() {
     dispatch(getHotelListRequest());
     return hotelsApi
       .getHotelList()
-      .then((response) => response.json())
-      .then((response) => {
-        return dispatch(getHotelListRequestSuccess(response));
-      }).catch((err) => {
-        return dispatch(getHotelListRequestFail(err));
-    });
+      .then(response => response.json())
+      .then(response => dispatch(getHotelListRequestSuccess(response)))
+      .catch(err => dispatch(getHotelListRequestFail(err)));
+  };
+}
+
+export function getHotelListBySearch(search) {
+  return (dispatch) => {
+    dispatch(getHotelListRequest());
+    return hotelsApi
+      .getHotelListBySearch(search)
+      .then(response => response.json())
+      .then(response => dispatch(getHotelListRequestSuccess(response)))
+      .catch(err => dispatch(getHotelListRequestFail(err)));
   };
 }

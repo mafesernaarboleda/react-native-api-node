@@ -2,30 +2,31 @@
  * @author Maria Fernanda Serna
  */
 
-import {
-  StyleSheet,
-  Dimensions
-} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
 const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    flexWrap:'wrap',
+    flexWrap: 'wrap',
     flexDirection: 'column',
     width,
   },
-  buttonImage:{
+  buttonImage: {
     borderColor: '#fff',
     borderWidth: 2,
     margin: 10,
   },
   image: {
-    height: 170,
-    width: 170
+    height: 150,
+    width: 170,
   },
-  buttonClose :{
+  buttonClose: {
     marginTop: 22,
     backgroundColor: '#000',
-    alignItems:  'flex-end',
-  }
+    alignItems: 'flex-end',
+  },
+  iconClose: {
+    margin: 10,
+  },
 });

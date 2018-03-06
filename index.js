@@ -19,6 +19,6 @@ const hotelsalmundo = () => (
   <Provider store={store}>
     <App />
   </Provider>
-  );
+);
 
 AppRegistry.registerComponent('hotelsalmundo', () => hotelsalmundo);
