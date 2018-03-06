@@ -17,7 +17,7 @@ Read more [react-native-cli](https://facebook.github.io/react-native/docs/gettin
 1. Clone Project
 ```bash
  $ git clone https://github.com//mafesernaarboleda/react-native-api-node.git
- $ cd react-native-chat-firebase
+ $ cd react-native-api-node
 ```    
 2. Go to project folder and install dependencies:
  ```bash
