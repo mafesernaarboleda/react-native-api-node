@@ -60,6 +60,9 @@ $ react-native run-android
 
 - ENJOY! :smile:
 
+## Workflow
+We use [airbnb-javascript](https://github.com/airbnb/javascript/tree/master/react) as JavaScript code style guide.
+
 ## Author
 
 * **Maria Fernanda Serna Arboleda** - *FullStack JavaScript Developer* - [Github](https://github.com/mafesernaarboleda)
