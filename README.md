@@ -1,5 +1,5 @@
 # React Native APP + Backend NODEJS
-App in React Native for the consumption of an application in NodeJS + MongoDB, to list in the main screen the response of the call to the api ```/hotels``` and to be able to  search of a specific hotel indicating the name or  a caracter when calling the api ```/hotels/search/: filter```.
+App in React Native for the consumption of an application in NodeJS + MongoDB, to list in the main screen the response of the call to the api ```/hotels``` and to be able to  search of a specific hotel indicating the name or  a caracter when calling the api ```/hotels/search/:filter```.
 
 By clicking on the item you can see the detailed information of the hotel, including, address, location in addition to a gallery of images associated with the hotel, to see the image in more detail you must click on it.
 
