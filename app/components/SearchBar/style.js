@@ -18,4 +18,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  inputText: {
+    height: 80,
+  },
 });

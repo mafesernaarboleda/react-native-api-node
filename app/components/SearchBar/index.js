@@ -22,6 +22,7 @@ class SearchBar extends Component {
     return (
       <View style={styles.inputSearch}>
         <TextInput
+          style={styles.inputText}
           onChangeText={search => this.setState({ search })}
           value={this.state.search}
           placeholder="Search.."
