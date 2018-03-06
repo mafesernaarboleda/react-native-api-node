@@ -2,6 +2,19 @@
 An example of React Native project with Backend Integration and workflow based on
 [react-native-cli](https://facebook.github.io/react-native/docs/getting-started.html)
 
+## Tools used in this project
+* [React Native](https://facebook.github.io/react-native/)
+* [React](https://facebook.github.io/react/)
+* [Redux](https://redux.js.org/)
+* [React Navigation](https://reactnavigation.org/)
+* [ESLint](https://github.com/eslint/eslint)
+* [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) as plugin for helping us to follow the airbnb code style guide.
+* [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+* [React Native Elements](https://github.com/react-native-community/react-native-elements)
+* [react-native-google-static-map](https://github.com/viatsko/react-google-static-map)
+* [react-native-star-rating](https://github.com/djchie/react-native-star-rating)
+* [react-native-image-zoom-viewer](https://github.com/ascoders/react-native-image-viewer)
+
 # Prerequisites 
 1. Install latest nodeJs https://nodejs.org/
 
