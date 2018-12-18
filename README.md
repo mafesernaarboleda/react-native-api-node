@@ -5,8 +5,6 @@ By clicking on the item you can see the detailed information of the hotel, inclu
 
 [react-native-cli](https://facebook.github.io/react-native/docs/getting-started.html)
 
-![alt text](https://github.com/mafesernaarboleda/react-native-api-node/blob/master/almundo.gif)
-
 
 ## Tools used in this project
 * [React Native](https://facebook.github.io/react-native/)
